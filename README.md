@@ -4,6 +4,24 @@ Aplikasi penyewaan garasi untuk sepeda, sepeda motor, mobil, dan mobil
 listrik. Laravel 13, MySQL 8, Blade + Bootstrap 5 + Alpine.js, dengan
 arsitektur layered monolith 3 lapis (Presentation, Business Logic, Data Access).
 
+## Diagram
+
+Diagram rancangan ada di folder [`docs/`](docs/). Gambar di bawah juga bisa
+dibuka langsung lewat tautannya.
+
+- [Use Case Diagram](docs/Use%20Case%20Diagram.drawio.png)
+- [Class Diagram Model](docs/Class%20Diagram%20BNSP%20%28Model%29.drawio.png): objek bisnis, atribut, dan relasinya
+- [Class Diagram Arsitektur](docs/Class%20Diagram%20%28Architecture%29.png): kelas utama tiga lapis dan arah ketergantungannya
+- [Entity-Relationship Diagram (ERD)](docs/ERD.png): tabel basis data dan relasinya
+
+![Use Case Diagram](docs/Use%20Case%20Diagram.drawio.png)
+
+![Class Diagram Model](docs/Class%20Diagram%20BNSP%20%28Model%29.drawio.png)
+
+![Class Diagram Arsitektur](docs/Class%20Diagram%20%28Architecture%29.png)
+
+![Entity-Relationship Diagram](docs/ERD.png)
+
 ## Kebutuhan
 
 - PHP 8.3 atau lebih baru, dengan ekstensi `gd`, `fileinfo`, `pdo_mysql`
