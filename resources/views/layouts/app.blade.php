@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('judul', 'Beranda') - Sewa Garasi</title>
+
+    {{-- Aplikasi web yang dapat dipasang di layar utama HP (manifest, ikon, service worker). --}}
+    <link rel="manifest" href="{{ asset('manifest.webmanifest') }}">
+    <meta name="theme-color" content="#0a3d91">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sewa Garasi">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
+    <link rel="apple-touch-icon" href="{{ asset('icons/apple-touch-icon.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => navigator.serviceWorker.register(@js(asset('sw.js')), { scope: '/' }).catch(() => {}));
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-app sticky-top shadow-sm mb-4">

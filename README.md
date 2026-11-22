@@ -51,6 +51,19 @@ php artisan serve
 Samakan `APP_URL` di `.env` dengan alamat aplikasi dijalankan, misalnya
 `http://127.0.0.1:8000` untuk `php artisan serve`.
 
+## Memasang di layar utama HP
+
+Aplikasi dapat dipasang sebagai web-app (manifest, ikon, dan service worker ada
+di `public/`). Buka alamat aplikasi di browser HP, lalu:
+
+- Android (Chrome): menu ⋮, pilih *Instal aplikasi* atau *Tambahkan ke layar utama*.
+- iPhone (Safari): tombol Bagikan, pilih *Tambah ke Layar Utama*.
+
+Syarat: HP harus bisa membuka aplikasinya. Tombol *Instal aplikasi* hanya muncul
+bila alamatnya HTTPS (atau `localhost`); di luar itu browser hanya menawarkan
+pintasan biasa. Service worker hanya menampilkan pesan bila tidak ada koneksi dan
+tidak menyimpan halaman apa pun di cache.
+
 ## Halaman utama
 
 | Peran | Halaman | Isi |
