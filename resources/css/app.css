@@ -1,0 +1,57 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/*
+ * Palet biru dan putih. Warna utama memakai biru bawaan Bootstrap; tambahan
+ * di bawah hanya untuk latar, judul, dan kartu ringkasan.
+ */
+:root {
+    --app-biru-tua: #0a3d91;
+    --app-biru: #0d6efd;
+    --app-biru-muda: #e7f1ff;
+    --app-latar: #f4f8ff;
+}
+
+body {
+    background-color: var(--app-latar);
+    min-height: 100vh;
+}
+
+.navbar-app {
+    background-color: var(--app-biru-tua);
+}
+
+.judul-halaman {
+    color: var(--app-biru-tua);
+    font-weight: 600;
+}
+
+.card {
+    border-color: var(--app-biru-muda);
+}
+
+.card-header {
+    background-color: var(--app-biru-muda);
+    color: var(--app-biru-tua);
+    font-weight: 600;
+}
+
+.table thead th {
+    background-color: var(--app-biru-muda);
+    color: var(--app-biru-tua);
+    white-space: nowrap;
+}
+
+.ringkasan-biaya {
+    background-color: var(--app-biru-muda);
+    border-left: 4px solid var(--app-biru);
+}
+
+.angka {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+}
+
+[x-cloak] {
+    display: none !important;
+}
